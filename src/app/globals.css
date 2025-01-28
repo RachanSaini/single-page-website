@@ -51,8 +51,6 @@
 }
 
 /* Hero section Styles */
-
-
 .hero {
   display: flex;
   flex-wrap: wrap; 
@@ -167,13 +165,13 @@
 
 .feature-grid .features {
   display: grid;
-  grid-template-columns: repeat(1, 1fr); /* Default: 1 column */
+  grid-template-columns: repeat(1, 1fr);
   gap: 30px;
 }
 
 @media (min-width: 640px) {
   .feature-grid .features {
-    grid-template-columns: repeat(2, 1fr); /* 2 columns for small screens */
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -207,6 +205,63 @@
 .feature-grid .feature h3 {
   font-size: 1.5rem
 }
+
+/* Team Grid Styles */
+.team-grid {
+  padding: 50px 20px;
+  background-color: #ffffff;
+}
+
+.team-grid h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2c3e50;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.team-grid .team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px; 
+}
+
+.team-grid .team-card {
+  background-color: #f4f4f4;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.team-grid .team-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.team-grid .team-card img {
+  border-radius: 50%; 
+  width: 180px; 
+  height: 180px; 
+  object-fit: cover;
+  margin-bottom: 15px;
+}
+
+.team-grid .team-card h3 {
+  font-size: 1.2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.team-grid .team-card p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
 
 /* CTA section Styles */
 

@@ -15,13 +15,6 @@ export default function NavbarSection({ navbar }: NavbarProps) {
         )}
         <h3 className="company-name">{navbar.name}</h3>
       </div>
-      {/* <div className="links">
-        {navbar.links.map((link: any) => (
-          <a key={link.fields.linkUrl} href={link.fields.linkUrl} className="link">
-            {link.fields.linkText}
-          </a>
-        ))}
-      </div> */}
     </nav>
   );
 }
