@@ -18,6 +18,7 @@ export default function HeroSection({ hero }: HeroSectionProps) {
                         width={hero.backgroundImage.fields.file.details.image.width}
                         height={hero.backgroundImage.fields.file.details.image.height}
                         alt={hero.backgroundImage.fields.title}
+                        priority={true}
                     />
                 )}
             </div>

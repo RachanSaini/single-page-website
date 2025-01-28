@@ -11,6 +11,7 @@ export default function NavbarSection({ navbar }: NavbarProps) {
             width={navbar.logo.fields.file.details.image.width}
             height={navbar.logo.fields.file.details.image.height}
             alt={navbar.logo.fields.title}
+            priority={true}
           />
         )}
         <h3 className="company-name">{navbar.name}</h3>

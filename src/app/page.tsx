@@ -1,46 +1,40 @@
 import { contentfulClient } from "./lib/contentfulClient";
 import HeroSection from "./components/heroSection";
 import FeatureGrid from "./components/featureGrid";
-import { FeatureGridData } from "./types/featureGridData"; // Importing the type for FeatureGridData
+import TeamGrid from "./components/teamGrid";
 import CtaSection from "./components/cta";
-import { CtaSectionData } from "./types/ctaSectionData";
 import NavbarSection from "./components/navbar";
+import { FeatureGridData } from "./types/featureGridData";
+import { CtaSectionData } from "./types/ctaSectionData";
 import { Navbarfields } from "./types/navbarData";
 import { TeamGridData } from "./types/teamGridData";
-import TeamGrid from "./components/teamGrid";
+import { generateMetadata } from "./metadata";
+
+export const metadata = await generateMetadata(); // Fetch metadata dynamically
 
 export default async function Home() {
-  //Fetching Navbar data
-  const navbarData = await contentfulClient.getEntries({ content_type: "navbar" });
-  const navbar = navbarData.items[0];
-  const navbarFields = navbar.fields as Navbarfields;
+  const [navbarData, heroData, featureGridData, teamGridData, ctaSectionData] = await Promise.all([
+    contentfulClient.getEntries({ content_type: "navbar" }),
+    contentfulClient.getEntries({ content_type: "hero" }),
+    contentfulClient.getEntries({ content_type: "featureGrid" }),
+    contentfulClient.getEntries({ content_type: "teamGrid" }),
+    contentfulClient.getEntries({ content_type: "cta" }),
+  ]);
 
-  // Fetching Hero Data
-  const heroData = await contentfulClient.getEntries({ content_type: "hero" });
-  const hero = heroData.items[0];
-
-  // Fetching FeatureGrid Data
-  const featureGridData = await contentfulClient.getEntries({ content_type: "featureGrid" });
-  const featureGrid = featureGridData.items[0];   
-  const featureGridFields = featureGrid.fields as unknown as FeatureGridData;
-
-  //Fetching Team Grid Data
-  const teamGridData = await contentfulClient.getEntries({ content_type: "teamGrid" });
-  const teamGrid = teamGridData.items[0];
-  const teamGridFields = teamGrid.fields as unknown as TeamGridData;
-
-  //fetching CTA Data
-  const ctaSectionData = await contentfulClient.getEntries({ content_type: "cta"});
-  const ctaData = ctaSectionData.items[0];  
-  const ctaFields = ctaData.fields as unknown as CtaSectionData;
+  const navbarFields = navbarData.items[0]?.fields as Navbarfields;
+  const heroFields = heroData.items[0]?.fields;
+  const featureGridFields = featureGridData.items[0]?.fields as unknown as FeatureGridData;
+  const teamGridFields = teamGridData.items[0]?.fields as unknown as TeamGridData;
+  const ctaFields = ctaSectionData.items[0]?.fields as unknown as CtaSectionData;
 
   return (
-    <div>
+    <main>
       <NavbarSection navbar={navbarFields} />
-      <HeroSection hero={hero.fields} />
+      <HeroSection hero={heroFields} />
       <FeatureGrid featureGrid={featureGridFields} />
-      <TeamGrid teamGrid={teamGridFields}/>
-      <CtaSection cta={ctaFields}/>
-    </div>
+      <TeamGrid teamGrid={teamGridFields} />
+      <CtaSection cta={ctaFields} />
+    </main>
   );
 }
+  
