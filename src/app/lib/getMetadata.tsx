@@ -9,12 +9,12 @@ export async function getMetadata(): Promise<Metadata> {
     if (!metadataData.items.length) {
       console.warn("Metadata not found in Contentful");
       return {
-        title: "Turban King - Turban Tying Services",
-        description: "Get turban tying services for weddings, graduations, and special occasions with expert guidance.",
+        title: "Turban Tying Services",
+        description: "Turban King - Get turban tying services for weddings, graduations, and special occasions with expert guidance.",
         openGraph: {
-          title: "Turban King - Turban Tying Experts",
-          description: "Professional turban tying services for Sikh, Hindu, and Muslim events.",
-          url: "https://example.com",
+          title: "Turban Tying Experts",
+          description: "Turban King - Professional turban tying services for Sikh, Hindu, and Muslim events.",
+          url: "https://single-page-website-navy.vercel.app/",
           images: [],
         },
       };
@@ -46,7 +46,7 @@ export async function getMetadata(): Promise<Metadata> {
       openGraph: {
         title: "Fallback OG Title",
         description: "Fallback OG Description",
-        url: "https://example.com",
+        url: "https://single-page-website-navy.vercel.app/",
         images: [],
       },
     };

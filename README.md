@@ -2,7 +2,7 @@ This is a frontend personal project built. The project follows modern frontend d
 
 ## 🚀 Live Demo
 
-**Hosted on Vercel:** Live URL (Replace with actual link after deployment)
+**Hosted on Vercel:** Live URL https://single-page-website-navy.vercel.app/
 
 ## 📌 Features
 
