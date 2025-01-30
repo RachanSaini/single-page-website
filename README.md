@@ -1,8 +1,8 @@
-This is a frontend personal project built for a company called Turban King. They provide Turban tying services. The project follows modern frontend development best practices, ensuring high performance, responsive design, and a smooth user experience.
+This is a frontend personal project built. The project follows modern frontend development best practices, ensuring high performance, responsive design, and a smooth user experience.
 
 ## 🚀 Live Demo
 
-Hosted on Vercel: Live URL (Replace with actual link after deployment)
+**Hosted on Vercel:** Live URL (Replace with actual link after deployment)
 
 ## 📌 Features
 
@@ -18,28 +18,34 @@ Accessible and SEO-friendly design
 
 ## 🛠 Tech Stack
 
-Frontend: Next.js, React
+**Frontend:** Next.js, React
 
-CMA: Contentful
+**CMA:** Contentful
 
-Styling: Tailwind CSS
+**Styling:** Tailwind CSS
 
-Deployment: Vercel
+**Deployment:** Vercel
 
 ## 🏗 Project Setup
 
 1️⃣ Clone the Repository
 
+```
 git clone https://github.com/RachanSaini/single-page-website.git
 cd <repo-folder>
+```
 
 2️⃣ Install Dependencies
 
+```
 npm install 
+```
 
 3️⃣ Run Locally
 
+```
 npm run dev
+```
 
 Open http://localhost:3000 in your browser.
 
@@ -47,11 +53,15 @@ Open http://localhost:3000 in your browser.
 
 Install Vercel CLI (if not already installed):
 
+```
 npm i -g vercel
+```
 
 Run the following command in the project folder:
 
+```
 vercel
+```
 
 Follow the CLI instructions to deploy your project.
 
