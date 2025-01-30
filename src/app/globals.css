@@ -150,6 +150,7 @@
 }
 
 /* Feature Grid Styles */
+
 .feature-grid {
   padding: 50px;
   background-color: #ffffff;
@@ -300,3 +301,5 @@
 .cta-button:hover {
   background-color: #d35400;
 }
+
+/* Footer Styles */

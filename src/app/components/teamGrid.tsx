@@ -1,12 +1,11 @@
 import Image from "next/image";
-import { TeamGridData } from "../types/teamGridData";
+import { TeamGridData } from "../types/teams/teamGridData";
 
 interface TeamGridProps {
   teamGrid: TeamGridData;
 }
 
 export default function TeamGrid({ teamGrid }: TeamGridProps) {
-    console.log(teamGrid.teamMember)
   return (
     <section className="team-grid">
       <h2>
