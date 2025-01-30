@@ -1,24 +1,71 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is a frontend personal project built for a company called ## Turban King ##. They provide Turban tying services. The project follows modern frontend development best practices, ensuring high performance, responsive design, and a smooth user experience.
 
-## Getting Started
+## 🚀 Live Demo
 
-First, run the development server:
+Hosted on Vercel: Live URL (Replace with actual link after deployment)
 
-```bash
+## 📌 Features
+
+Built with Next.js for optimized performance.
+
+Responsive Tailwind CSS styling for seamless scaling.
+
+Optimized images and assets for better Core Web Vitals scores
+
+Includes Email & WhatsApp CTA for direct customer contact
+
+Accessible and SEO-friendly design
+
+## 🛠 Tech Stack
+
+Frontend: Next.js, React
+
+CMA: Contentful
+
+Styling: Tailwind CSS
+
+Deployment: Vercel
+
+## 🏗 Project Setup
+
+1️⃣ Clone the Repository
+
+git clone https://github.com/RachanSaini/single-page-website.git
+cd <repo-folder>
+
+2️⃣ Install Dependencies
+
+npm install 
+
+3️⃣ Run Locally
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open http://localhost:3000 in your browser.
 
+## 🚀 Deployment on Vercel
 
-## Deploy on Vercel
+Install Vercel CLI (if not already installed):
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+npm i -g vercel
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Run the following command in the project folder:
+
+vercel
+
+Follow the CLI instructions to deploy your project.
+
+## 📊 Performance Optimizations
+
+This project implements several optimizations to ensure high performance:
+
+Image Optimization: Uses Next.js Image component for automatic optimization.
+
+Link Optimization: Uses Next.js LINK component for automatic otimization.
+
+Lazy Loading: Defers loading of images and assets to improve initial load time by using priority.
+
+CSS & JavaScript Optimization: Uses modern techniques to ensure smaller bundle sizes.
+
+Responsive Design: Ensures smooth scaling across different devices.
+
